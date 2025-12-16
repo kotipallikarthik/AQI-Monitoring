@@ -41,7 +41,7 @@ def verify_user(email, password):
 
 # Fetch AQI data using latitude and longitude
 def get_aqi(lat, lon):
-    IQAIR_API_KEY = "8dadfa53-8d0d-454a-b491-16990aceb29c"
+    IQAIR_API_KEY = ""
     url = f"http://api.airvisual.com/v2/nearest_city?lat={lat}&lon={lon}&key={IQAIR_API_KEY}"
     
     response = requests.get(url)
@@ -163,3 +163,4 @@ if __name__ == "__main__":
     subprocess.Popen(["python", "locate.py"])
 
     app.run(debug=True)
+
